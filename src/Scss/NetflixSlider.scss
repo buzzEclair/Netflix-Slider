@@ -1,0 +1,163 @@
+.netflix-slider{
+  position: relative;
+  outline: 0;
+  margin: 3vw 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .netflix-slider-row-title{
+    line-height: 1.3;
+    margin: 0;
+    .row-title{
+      font-size: 1.4vw;
+      color: #e5e5e5;
+      font-weight: 700;
+      margin: 0 4% .5em 4%;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 6em;
+      .row-header-title{
+        display: table-cell;
+        vertical-align: bottom;
+        line-height: 1.25vw;
+        font-size: 1.4vw;
+      }
+    }
+  }
+  .netflix-slider-row-container{
+    transition: transform .54s cubic-bezier(.5,0,.1,1) 0s,-webkit-transform .54s cubic-bezier(.5,0,.1,1) 0s,-moz-transform .54s cubic-bezier(.5,0,.1,1) 0s,-o-transform .54s cubic-bezier(.5,0,.1,1) 0s;
+    .netflix-slider-row-content{
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .netflix-slider-slider{
+        position: relative;
+        margin: 0;
+        padding: 0 4%;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        z-index: 2;
+        &:hover .pagination-indicator{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.pagination-indicator{
+  margin: -24px 0 12px 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  right: 4%;
+  display: none;
+  li{
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background-color: #4d4d4d;
+    margin-left: 1px;
+    &.active{
+      background-color: #aaa;
+    }
+  }
+}
+
+.netflix-slider-slider-showpeek{
+  overflow-x: visible;
+  padding-bottom: 1px;
+  .netflix-slider-slider-content{
+    white-space: nowrap;
+  }
+}
+
+.netflix-slider-item{
+  width: 16.66666667%;
+  box-sizing: border-box;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+  vertical-align: top;
+  padding: 0 2px;
+  font-weight: 800;
+  .netflix-slider-item-container{
+    .netflix-slider-item-16x9{
+      width: 100%;
+      height: 0;
+      position: relative;
+      overflow: hidden;
+      padding: 28.125% 0;
+      border-radius: 4px;
+      .netflix-slider-item-img{
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #222;
+      }
+    }
+  }
+}
+
+.handle{
+  background: #14141480;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 4%;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  &.handlePrev{
+    left: -2px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  &.handleNext{
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+    right: 0;
+  }
+  &.active{
+    cursor: pointer;
+  }
+  svg{
+    transform: scale(1.25);
+    color: #fff;
+    align-self: center;
+    font-size: 2.5vw;
+  }
+}
+
+.title{
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  
+}
